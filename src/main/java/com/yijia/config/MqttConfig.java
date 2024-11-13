@@ -11,7 +11,11 @@ public class MqttConfig {
 
     public static MqttClient mqttClient;
 
-    public void mqttClient() {
+    static {
+        mqttClient();
+    }
+
+    public static void mqttClient() {
         String broker = "tcp://121.37.216.129:1883";
         String clientId = "mqtt-client";
         MemoryPersistence persistence = new MemoryPersistence();
