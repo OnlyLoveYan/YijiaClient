@@ -1,11 +1,12 @@
 package com.yijia;
 
 
-import com.yijia.service.impl.MqttServiceImpl;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@SpringBootApplication
 public class Main {
     public static void main(String[] args) {
-        MqttServiceImpl mqttService = new MqttServiceImpl();
-        mqttService.publish("","");
+        SpringApplication.run(Main.class, args);
     }
 }
